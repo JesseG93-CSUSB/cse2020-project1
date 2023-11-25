@@ -69,18 +69,7 @@ public class ListFunctions {
      *   the list.
      */
     public static int indexOf(ListNode list, int element) {
-        return indexOfRecur(list, element, 0)
-    }
-    private static int indexOfRecur(ListNode list, int element, int index){
-        if(list == null){
-            return -1;
-        }
-
-        if(list.get(index) == element){
-            return index;
-        }
-
-        return indexOfRecur(list, element, index++);
+        return list.indexOf(element);
     }
 
     
@@ -99,7 +88,7 @@ public class ListFunctions {
      *   the list.
      */
     public static int lastIndexOf(ListNode list, int element) {
-        return 0; // FIXME
+        return list.lastIndexOf(element);
     }
 
     /**
@@ -115,7 +104,13 @@ public class ListFunctions {
      * @return True if the lists are equal; false otherwise.
      */
     public static boolean equals(ListNode list1, ListNode list2) {
-        return false; // FIXME
+        if (list1.equals(list2) == true) {
+        	return true;
+        }
+        
+        else {
+        	return false;
+        }
     }
 
     /**
